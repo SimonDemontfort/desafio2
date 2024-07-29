@@ -11,19 +11,13 @@ def recuperar_tareas_y_subtareas():
   return tareas
 
 def eliminar_tarea(tarea_id):
-  # 1. Obtengo la tarea que deseo eliminar
   t = Tarea.objects.get(id=tarea_id)
-  # 2. Modifico su atributo "eliminada"
   t.eliminada = True
-  # 3. Guardo los cambios ebn base de datos
   t.save()
 
 def crear_sub_tarea(tarea_id, descripcion):
-  # 1. Obtengo la tarea
   t = Tarea.objects.get(id=tarea_id)
-  # 2. Creo una nueva sub-tarea
   st = SubTarea(descripcion=descripcion, tarea=t)
-  # 3. Guardamos la subtarea
   st.save()
 
   imprimir_en_pantalla()

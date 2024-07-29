@@ -1,0 +1,17 @@
+El proyecto necesita tener las siguientes instalaciones para ser funcional.
+
+Tener el ambiente virtual instalado
+Instalar Django en la version deseada
+Adaptar los datos de conexión a la base datos
+Instalar psycopg2 para conectar python con POSTGRESQL
+
+	LISTADO DE COMANDO EN BASH.SHELL
+
+-Agregar tarea:
+	agregar_tarea(' tarea por agregar ')
+
+-Agregar sub tarea
+	agregar_sub_tarea('id de tarea', ' subtarea por agregar ')
+
+-eliminar tarea
+	eliminar_tarea(	'id de tarea')
